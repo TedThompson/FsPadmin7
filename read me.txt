@@ -1,0 +1,133 @@
+******************************************
+INTRO
+******************************************
+Those script remain very basic and simple so it's 
+not a pain to tune them to fit your Va need, the 
+drawback it that ... they are simple.
+
+
+******************************************
+INSTALL
+******************************************
+
+Copying file:
+-------------
+
+unzip this archive and copy all the file in your WWW directory
+either online or on localhost (using PHPDEV for example)
+You can copy them on a subdirectory (example: "vaFsP" or "va")
+
+Take care about the case, many site accept only link with the correct
+case: 
+
+ie:  "http://mysite.com/VA/FsPgetflight.php" not egal to 
+"http://mysite.com/va/FsPgetflight.php"
+
+creating a SQL DB:
+--------------------
+If you don't want to use an existing sql base create a DB
+with any name as FsP or VaFsP for example.
+
+
+Creating table managing the settings:
+--------------------------------------
+Now open your browser and browse to the FsPadmin directory
+example: http://localhost/www/FsPadmin/
+online example: http://www.mysite.com/FsPVa/FsPadmin/
+
+user:demo
+pass:demo
+
+the admin part is self explanatory if you know a bit php/sql
+anyway the admin will control your connection and if there
+is no required table on your SQL db it will create them for you...
+
+******************************************
+FSP UNIT
+******************************************
+As translating the units is a pain FSP export the 
+unit ready with their unit text (ie: "193 kts" "5000 ft")
+the admin let you choose wich unit you want that FsP export,
+it's a good idea to fix that at start and don't change after
+to not mix unit in your database.
+
+The admin let you choose also the welcome message that will 
+be displayed to your users in his connect dialog.
+
+******************************************
+DEMO DB
+******************************************
+A demo flight database with some flight is available
+in gzip format in FsPadmin folder "flights_db_example.gz"
+using PhPMyAdmin you can import it in the flight database
+and have some flight already showed on the flight page.
+
+
+******************************************
+EXPORT FROM FSP
+******************************************
+FsP must have a config file in is "FsPassengers/config_va"
+directory, this file will tell FsP where to connect, the username
+and password of your Va member as well as the name that will appear
+in the "virtual airline" menu of FsP.
+
+So you are responsible to provide this file to any of your members,
+the php admin can be tuned to create this file automatically
+based on user profile.
+
+See "config_example1.cfg" and "config_example2.cfg"
+
+those config file can be any name but must end with ".cfg"
+
+here an explaination of CFG parameters:
+------------------------------------------------
+"menu_name="  the name that will appear in the FsP menu
+"base_url="   the base url of your site
+"path_stats=" the url to the stats page (to view flight) MINUS the base URL WITHOUT slash at start		
+path_export=  the url to the get flight script MINUS the base URL WITHOUT slash at start and with the import script name at end.	
+"username="   username (you must create this user in admin !!! 3 character minimum!!!)
+"password="   user password
+------------------------------------------------
+
+******************************************
+SEEING EXPORTED STATS
+******************************************
+A basic script is included FsPListFlight.php, it remain VERY basic
+will give only a rough list of the flight in the database so this 
+one has to be tuned... A lot can be done, you can display any value
+you want and forget the others, mix value to give per pilot or user stats,
+overall stats, make query by somes value etc. 
+
+THIS SCRIPT IS INTENDED TO BE INCLUDED IN ANOTHER PAGE not to be viewed
+alone, at worse you just need to include header and footer to it...
+
+if you have a site with the index that include other page you probably
+just need to do something like that in index.php:
+
+if($display=="va")
+{
+    include "va/FsPlistFlight.php"
+}
+
+another style:
+
+if($display=="va")
+{
+    include "include/header.php"
+    include "include/FsPlistFlight.php"
+    include "include/footer.php"
+}
+
+or if you want to link directly to the FsPlistFlight.php or your custom script
+you'll need probably to include the header and footer.
+
+Look to the FsP demo page here: http://www.fspassengers.com/?action=va
+to have a view of what can be done (remain basic but a bit better)
+
+
+Happy importing !
+
+Dan
+
+
+
