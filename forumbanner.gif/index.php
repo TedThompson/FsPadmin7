@@ -10,24 +10,19 @@ $dbserver=$cfg['mysql_server'];
 $dbuser=$cfg['user'];
 $dbpassword=$cfg['passwordbase'];
 $dbdatabase=$cfg['database'];
-$db = mysqli_connect($dbserver, $dbuser, $dbpassword) or die("Unable to connect to database on '".$dbserver."' with the user '".$dbuser."'<br />"."Please check your settings in setting.php!");
-	if (mysqli_connect_errno()) {
-		echo "WTF!?";
-		printf("Connect failed: %s\n", mysqli_connect_error());
-		exit();
-	}
-mysqli_select_db($db,$dbdatabase) or die("Please create the database '".$dbdatabase."'!");
+$db = mysqli_connect($dbserver, $dbuser, $dbpassword, $dbdatabase) or die("Unable to connect to database on '".$dbserver."' with the user '".$dbuser."'<br />"."Please check your settings in setting.php!");
+//mysqli_select_db($dbdatabase,$db) or die("Please create the database '".$dbdatabase."'!");
 
 //Get Command Line Parameter
 $pilot=$_GET["pilot"];
 if (isset($pilot))
 {
-	$filterstring="PilotName = '$pilot'";
+	$filterstring="PilotName='$pilot'";
 }
 $user=$_GET["user"];
 if (isset($user))
 {
-	$filterstring="UserName = '$user'";
+	$filterstring="UserName='$user'";
 }
 
 //Set Initial Variables
@@ -36,14 +31,12 @@ $XOffset=$cfg["XOffset"];
 $YOffset=$cfg["YOffset"];
 
 //Get Number of Flights
-//echo $filterstring;
-//$filterstring = mysqli_real_escape_string($db,$filterstring);
 $gettables = mysqli_query($db,"SELECT * FROM `flights` WHERE $filterstring");
 $totalflights = mysqli_num_rows($gettables);
 
 //Get Last Flight Info
 $result=mysqli_query($db,"SELECT * FROM flights WHERE $filterstring ORDER BY id desc");
-$row = mysqli_fetch_assoc($result);	
+$row = mysqli_fetch_assoc($result);
 $StartCity=substr($row["DepartureIcaoName"],0,4);
 $EndCity=substr($row["ArrivalIcaoName"],0,4);
 $LastFlightCompany=$row["CompanyName"];
@@ -59,8 +52,6 @@ $LastFlightTDSpeed=$row["TouchDownVertSpeedFt"];
 $LastFlightResult=$row["FlightResult"];
 $LastFlightPaxOpinion=$row["PassengersOpinion"];
 $LastFlightNumber=$row["FlightId"];
-
-
 if ($cfg["DebugMode"]!=0)
 {
 	echo "Pilot Name: ".$LastFlightPilot."<br />";
@@ -85,10 +76,8 @@ if ($cfg["DebugMode"]!=0)
 }
 
 //Get Averages and Totals
-
 $result= mysqli_query($db,"SELECT SEC_TO_TIME(AVG(TIME_TO_SEC(TotalBlockTime))) As AvgBlockTime, SEC_TO_TIME(SUM(TIME_TO_SEC(TotalBlockTime))) As SumBlockTime, ROUND(AVG(TotalDistance)) As AvgDistance, SUM(TotalDistance) As SumDistance, SUM(NbrPassengers) AS TotalPax, ROUND(AVG(TouchDownVertSpeedFt)) As AvgTDSpeed, MAX(TouchDownVertSpeedFt) As MaxTDSpeed, MIN(TouchDownVertSpeedFt) As MinTDSpeed FROM flights WHERE $filterstring");
 $row = mysqli_fetch_assoc($result);
-
 $TotalBlockTime=$row["SumBlockTime"];
 $AvgBlockTime=$row["AvgBlockTime"];
 $TotalDistance=$row["SumDistance"];

@@ -1,39 +1,39 @@
-body		{
-	text-align: center;
-	font-family: verdana;
-	width: 800px;
-	margin: 0 auto;
-}
-img	{
-	border: 0;
-}
-.pireptable	{
-	float: right;
-	padding: 0;
-	margin: 0;
-	spacing: 0;
-	width: 50%;
-	border: 1px solid #e7e7e7;
-}
-.pirepcell	{
-	text-align: right;
-	width: 120px;
-	background: #57f;
-	color: #fff;
-	padding: 0 5px 1px 5px;
-	font-size: .8em;
-}
-.pirepdata	{
-	font-size: .8em;
-	padding: 0 0 0 5px;
-	border-bottom: 1px solid #e7e7e7;
-}
-.pirepheader	{
-	background: #00a;
-	color: #fff;
-	padding: 10px;
-}
-.map	{	
-	width: 390px;
-	border: 1px solid #e7e7e7;
-}
+body		{
+	text-align: center;
+	font-family: verdana;
+	width: 800px;
+	margin: 0 auto;
+}
+img	{
+	border: 0;
+}
+.pireptable	{
+	float: right;
+	padding: 0;
+	margin: 0;
+	spacing: 0;
+	width: 50%;
+	border: 1px solid #e7e7e7;
+}
+.pirepcell	{
+	text-align: right;
+	width: 120px;
+	background: #57f;
+	color: #fff;
+	padding: 0 5px 1px 5px;
+	font-size: .8em;
+}
+.pirepdata	{
+	font-size: .8em;
+	padding: 0 0 0 5px;
+	border-bottom: 1px solid #e7e7e7;
+}
+.pirepheader	{
+	background: #00a;
+	color: #fff;
+	padding: 10px;
+}
+.map	{	
+	width: 390px;
+	border: 1px solid #e7e7e7;
+}

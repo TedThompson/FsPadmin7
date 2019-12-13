@@ -1,48 +1,48 @@
-DBE's FSPASSENGERS DYNAMIC SIG
-==============================
-
-
-a) Prerequisites
-
--Website provider (or own webserver)
--Installed FSP Pirep (VA) system
-
-
-b) Installation
-
-This package contains the following files:
-
--fspsig.php		Main application
--fspsigconfig.php	Config file - Contains the parameters which can be customized
--sig.png		Generic empty background
--sigfsp.png		FsPassengers empty background
--Install.txt		This file
--Config.txt		Configuration parameters
--sigex.jpg		Example of a sig on the generic background
--sigefspx.jpg		Example of a sig on the FsPassengers background
--sigsrex.jpg		Example of a sig on a customized background
-
-Simply place these files in same directory as your "FsPlistflight.php" VA file.
-
-
-c) Configuration
-
-In order to choose which statistics you want displayed on your dynamic sig, refer to the "Config.txt" file supplied with this package.
-
-
-d) Usage
-
-You can refer to your dynamic signature using the following URL:
-
-http://yourdomain.com/yourdirectory/fspsig.php 
-
-where "yourdomain.com" is the name of your website provider and "yourdirectory" is the one which contains your "FsPlistflight.php" VA file.
-
-In order to use it as a signature on the FsPassenger forum (and in most other forums for that matter), simply edit your profile and add the following code in the "Signature" field:
-
-[IMG]http://yourdomain.com/yourdirectory/fspsig.php[/IMG]
-
-Do NOT worry about the "php" suffix: your signature will be displayed as a "png" file.
-
-
+DBE's FSPASSENGERS DYNAMIC SIG
+==============================
+
+
+a) Prerequisites
+
+-Website provider (or own webserver)
+-Installed FSP Pirep (VA) system
+
+
+b) Installation
+
+This package contains the following files:
+
+-fspsig.php		Main application
+-fspsigconfig.php	Config file - Contains the parameters which can be customized
+-sig.png		Generic empty background
+-sigfsp.png		FsPassengers empty background
+-Install.txt		This file
+-Config.txt		Configuration parameters
+-sigex.jpg		Example of a sig on the generic background
+-sigefspx.jpg		Example of a sig on the FsPassengers background
+-sigsrex.jpg		Example of a sig on a customized background
+
+Simply place these files in same directory as your "FsPlistflight.php" VA file.
+
+
+c) Configuration
+
+In order to choose which statistics you want displayed on your dynamic sig, refer to the "Config.txt" file supplied with this package.
+
+
+d) Usage
+
+You can refer to your dynamic signature using the following URL:
+
+http://yourdomain.com/yourdirectory/fspsig.php 
+
+where "yourdomain.com" is the name of your website provider and "yourdirectory" is the one which contains your "FsPlistflight.php" VA file.
+
+In order to use it as a signature on the FsPassenger forum (and in most other forums for that matter), simply edit your profile and add the following code in the "Signature" field:
+
+[IMG]http://yourdomain.com/yourdirectory/fspsig.php[/IMG]
+
+Do NOT worry about the "php" suffix: your signature will be displayed as a "png" file.
+
+
 (C)2006 Mark Brighty

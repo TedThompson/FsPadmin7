@@ -1,19 +1,21 @@
 <?php
 if(!defined("FSP_ADMIN")) return;
-// recupere depuis session
+
+// recovered session
 $user   = $_SESSION['user'];
 $pass   = $_SESSION['pass'];
-// ok on est en session, continue
+
+// ok we are in session?, continue?
 if($user==$cfg['admin_user']&&$pass==$cfg['admin_pass']){
 	return true;
 }
-// bon, rien n'a marché est ce que par hazard on viens de rentrer le password dans le formulaire ?
+
+// OK, that didn't work. Are we just now entering the password in the form?
 $user  = $_POST['user'];
 $pass  = $_POST['pass'];
 $login = $_POST['login'];
 $user  = htmlspecialchars($user);
 $pass  = htmlspecialchars($pass);
-//echo $user."::".$pass."::".$login;
 if($login==1)
 {
 	if($user==$cfg['admin_user']&&$pass==$cfg['admin_pass']){
@@ -25,14 +27,18 @@ if($login==1)
 		return true;
 	}
 }
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
 	<title>FsPassengers login</title>
 	<link href="admin.css" rel="stylesheet" type="text/css">
 </head>
+
 <body bgcolor="#C0C0C0">
+
 <br><br>
 <table align="center" width="900" cellspacing="2" cellpadding="2" border="0">
 <tr align="center"><td align="center" colspan="3"><strong style="font-size: 20px;"><u><em>FsPassengers 1.5 admin</em></u></strong></td></tr>
@@ -48,7 +54,6 @@ if($_SESSION['wrong_password']>0)
 else
 {
  	echo "<strong style=\"color: Red;\">&nbsp;</strong>"; 
-	echo $_SESSION['wrong_password'];
 }
 ?>
  </td></tr>

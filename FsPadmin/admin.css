@@ -1,70 +1,62 @@
-a:link 
-{
-	font-family: Verdana, Arial, Clean, Helvetica, sans-serif;
-	font-size: 12px;
-	color: Blue;
-	font-weight: bold;
-	text-decoration: none;
-} 
-a:visited 
-{
-	font-family: Verdana, Arial, Clean, Helvetica, sans-serif;
-	font-size: 12px;
-	color: Blue;
-	font-weight: bold;
-	text-decoration: none;
-} 
-a:active 
-{
-	font-family: Verdana, Arial, Clean, Helvetica, sans-serif;
-	font-size: 12px;
-	color: Blue;
-	font-weight: bold;
-	text-decoration: none; 
-} 
-a:hover 
-{
-	font-family: Verdana, Arial, Clean, Helvetica, sans-serif;
-	font-size: 12px;
-	color: Blue;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-BODY, TD, TR, P, UL, OL, LI, INPUT, SELECT, DL, DD, DT, FONT
-{
-    font-family: Verdana, Arial, Clean, Helvetica, sans-serif;
-    font-size: 12px;
-}
-.TinyFrame
-{
-    border-style : solid;
-    border-color : Black;
-    border-width : 1px;
-}
-.WithTitle
-{
-	border-style: solid;
-	border-color: Black;
-	border-width: 1px;
-	font-family: Verdana, Arial, Clean, Helvetica, sans-serif;
-	font-size: 12px;
-	color: White;
-	font-weight: bold;
-	background-color: #00008B;
-}
-.Red
-{
-    color: Red;
-}
-.Green
-{
-	color: Green;
-}
-.forumlink{
-	color: Navy;
-	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
-	font-size : 16px;
-	text-decoration : underline;
-}
-     
+a: link{
+	font-family: Verdana, Arial, Clean, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #0000FF;
+	font-weight: 700;
+	text-decoration: none;
+}
+a: visited{
+	font-family: Verdana, Arial, Clean, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #0000FF;
+	font-weight: 700;
+	text-decoration: none;
+}
+a: active{
+	font-family: Verdana, Arial, Clean, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #0000FF;
+	font-weight: 700;
+	text-decoration: none;
+}
+a: hover{
+	font-family: Verdana, Arial, Clean, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #0000FF;
+	font-weight: 700;
+	text-decoration: none;
+}
+BODY, TD, TR, P, UL, OL, LI, INPUT, SELECT, DL, DD, DT, FONT{
+	font-family: Verdana, Arial, Clean, Helvetica, sans-serif;
+	font-size: 12px;
+}
+td[colspan="2"]{
+	padding-top: 15px;
+}
+.TinyFrame{
+	border-style : solid;
+	border-color : #000000;
+	border-width : 1px;
+}
+.WithTitle{
+	border-style: solid;
+	border-color: #000000;
+	border-width: 1px;
+	font-family: Verdana, Arial, Clean, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	font-weight: 700;
+	background-color: #00008B;
+}
+.Red{
+	color: #FF0000;
+}
+.Green{
+	color: #008000;
+}
+.forumlink{
+	color: #000080;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 16px;
+	text-decoration : underline;
+}

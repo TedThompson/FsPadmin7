@@ -1,113 +1,113 @@
-DBE's FSPASSENGERS DYNAMIC SIG - CONFIGURATION
-==============================================
-
-
-a) Introduction
-
-Your FSP Dynamic Signature can display the following data:
-
-Example:
-
-Pilot Name: 			Roggie Wilco
-Number of Flights: 		66
-
-LAST FLIGHT
-===========
-Flight Date: 			2006-10-29
-Leg : 				LFSB - LFBO
-Flight Company: 		Swiss Airlines
-Aircraft Flown: 		A320-214 Swissair
-# of Pax Onboard: 		133
-Duration: 01:17:		48
-Distance: 			350 Nm
-Max Altitude: 			20252 ft
-Landing Speed: 			121 kt
-Touchdown Speed: 		-178.46 ft/min
-Flight Result: 			Perfect
-Pax Opinion: 			100
-
-GENERAL STATS
-=============
-Total Time Flown: 		85:26:44
-Average Time per Flight: 	01:17:40
-Total Distance Flown: 		17165 nm
-Average Distance per Flight: 	260 nm
-Total Pax Transported: 		9190
-Average Touchdown Speed: 	-330 ft/min
-Minimum Touchdown Speed: 	-16.92 ft/min
-Maximum Touchdown Speed: 	-1080.77 ft/min
-
-FYI: this info can be provided by enabling the debug mode in the "fspsigconfig.php" file and refreshing the URL to your sig.
-
-The number of lines displayed on your sig simply depends on:
-
--Height of sig
--Line spacing
--Font size
--Y Offset
-
-
-b) Configuring your sig
-
-The "fspsigconfig.php" is the ONLY file which must be edited to customize your dynamic signature. It contains the following parameters:
-
-#####################################################################################
-
-#General variables
-$cfg["SigName"] = "sigfsp.png";	//Enter the name of your sig template
-$cfg["DebugMode"] = 0;		//1 = Enable debug mode, 0 = Disable debug mode
-$cfg["XOffset"] = 10;		//Number of pixels from the left side of your sig
-$cfg["YOffset"] = 3;		//Number of pixels from the top of your sig
-$cfg["Spacing"] = 10;		//Space between lines
-$cfg["RColour"] = 0;		//Red component of the RGB text colour (0-255)
-$cfg["GColour"] = 0;		//Green component of the RGB text colour (0-255)
-$cfg["BColour"] = 192;		//Blue component of the RGB text colour (0-255)
-$cfg["Font"] = 3;		//[1] Small, [2] Medium, [3] Mediumm bold, [4] Large, [5] Large bold
-
-#Last Flight Data (1 = Enabled, 0 = Disabled)
-$cfg["ShowPilotName"] = 0;	//Display pilot who performed last flight
-$cfg["ShowNumFlights"] = 1;	//Display total number of flights
-$cfg["ShowCompanyName"] = 0;	//Display company used to perform last flight
-$cfg["ShowLeg"] = 1;		//Display the departure and arrival ICAO codes of the last flight
-$cfg["ShowLastDate"] = 1;	//Display date of last flight
-$cfg["ShowLastAircraft"] = 0;	//Display the name of the aircraft used during the last flight
-$cfg["ShowPax"] = 0;		//Display the number of pax last transported
-$cfg["ShowDuration"] = 0;	//Display the duration of the last flight
-$cfg["ShowDistance"] = 0;	//Display the distance flow at the occasion of the last flight
-$cfg["ShowAltitude"] = 0;	//Display the the maximum altitude reached during the last flight
-$cfg["ShowLSpeed"] = 0;		//Display the landing speed of the last flight
-$cfg["ShowTDSpeed"] = 0;	//Display the touchdown speed of the last flight
-$cfg["ShowResult"] = 0;		//Display the result of the last flight
-$cfg["ShowOpinion"] = 0;	//Display the passenger opinion for the last flight
-
-#Statistics (1 = Enabled, 0 = Disabled)
-$cfg["ShowTotalTime"] = 1;		//Display the total time flown with FSPassengers
-$cfg["ShowAverageTime"] = 0;		//Display the average time per flight
-$cfg["ShowTotalDistance"] = 0;		//Display the total distance flown with FSPassengers
-$cfg["ShowAverageDistance"] = 1;	//Display the average distance flown per flight
-$cfg["ShowTotalPax"] = 0;		//Display the total amount of Pax transported
-$cfg["ShowAverageTDS"] = 1;		//Display the average touchdown speed over all flights
-$cfg["ShowMinimumTDS"] = 0;		//Display the minimum touchdown speed ever achieved
-$cfg["ShowMaximumTDS"] = 0;		//Display the maximum touchdown speed ever suffered
-
-#####################################################################################
-
-Simply toggle the parameters you wish to display using [1] to enable and [0] to disable the parameter.
-
-
-c) Examples
-
-Included in this package are the following JPG files:
-
--sigex.jpg		Example of a sig on a generic empty background
--sigfspex.jpg		Example of a sig on a FSPassengers background
--sigsrex.jpg		Example of a sig on a customized background
-
-
-d) Customizing your background file
-
-You either use one of the two "PNG" files supplied with this package or create your very own using your favorite graphics programme (i.e. Photoshop or Paint Shop Pro".
-
-Please note: if you change the filename, do not forget to change the $cfg["SigName"] parameter in your "fspsigconfig.php" file.
-
+DBE's FSPASSENGERS DYNAMIC SIG - CONFIGURATION
+==============================================
+
+
+a) Introduction
+
+Your FSP Dynamic Signature can display the following data:
+
+Example:
+
+Pilot Name: 			Roggie Wilco
+Number of Flights: 		66
+
+LAST FLIGHT
+===========
+Flight Date: 			2006-10-29
+Leg : 				LFSB - LFBO
+Flight Company: 		Swiss Airlines
+Aircraft Flown: 		A320-214 Swissair
+# of Pax Onboard: 		133
+Duration: 01:17:		48
+Distance: 			350 Nm
+Max Altitude: 			20252 ft
+Landing Speed: 			121 kt
+Touchdown Speed: 		-178.46 ft/min
+Flight Result: 			Perfect
+Pax Opinion: 			100
+
+GENERAL STATS
+=============
+Total Time Flown: 		85:26:44
+Average Time per Flight: 	01:17:40
+Total Distance Flown: 		17165 nm
+Average Distance per Flight: 	260 nm
+Total Pax Transported: 		9190
+Average Touchdown Speed: 	-330 ft/min
+Minimum Touchdown Speed: 	-16.92 ft/min
+Maximum Touchdown Speed: 	-1080.77 ft/min
+
+FYI: this info can be provided by enabling the debug mode in the "fspsigconfig.php" file and refreshing the URL to your sig.
+
+The number of lines displayed on your sig simply depends on:
+
+-Height of sig
+-Line spacing
+-Font size
+-Y Offset
+
+
+b) Configuring your sig
+
+The "fspsigconfig.php" is the ONLY file which must be edited to customize your dynamic signature. It contains the following parameters:
+
+#####################################################################################
+
+#General variables
+$cfg["SigName"] = "sigfsp.png";	//Enter the name of your sig template
+$cfg["DebugMode"] = 0;		//1 = Enable debug mode, 0 = Disable debug mode
+$cfg["XOffset"] = 10;		//Number of pixels from the left side of your sig
+$cfg["YOffset"] = 3;		//Number of pixels from the top of your sig
+$cfg["Spacing"] = 10;		//Space between lines
+$cfg["RColour"] = 0;		//Red component of the RGB text colour (0-255)
+$cfg["GColour"] = 0;		//Green component of the RGB text colour (0-255)
+$cfg["BColour"] = 192;		//Blue component of the RGB text colour (0-255)
+$cfg["Font"] = 3;		//[1] Small, [2] Medium, [3] Mediumm bold, [4] Large, [5] Large bold
+
+#Last Flight Data (1 = Enabled, 0 = Disabled)
+$cfg["ShowPilotName"] = 0;	//Display pilot who performed last flight
+$cfg["ShowNumFlights"] = 1;	//Display total number of flights
+$cfg["ShowCompanyName"] = 0;	//Display company used to perform last flight
+$cfg["ShowLeg"] = 1;		//Display the departure and arrival ICAO codes of the last flight
+$cfg["ShowLastDate"] = 1;	//Display date of last flight
+$cfg["ShowLastAircraft"] = 0;	//Display the name of the aircraft used during the last flight
+$cfg["ShowPax"] = 0;		//Display the number of pax last transported
+$cfg["ShowDuration"] = 0;	//Display the duration of the last flight
+$cfg["ShowDistance"] = 0;	//Display the distance flow at the occasion of the last flight
+$cfg["ShowAltitude"] = 0;	//Display the the maximum altitude reached during the last flight
+$cfg["ShowLSpeed"] = 0;		//Display the landing speed of the last flight
+$cfg["ShowTDSpeed"] = 0;	//Display the touchdown speed of the last flight
+$cfg["ShowResult"] = 0;		//Display the result of the last flight
+$cfg["ShowOpinion"] = 0;	//Display the passenger opinion for the last flight
+
+#Statistics (1 = Enabled, 0 = Disabled)
+$cfg["ShowTotalTime"] = 1;		//Display the total time flown with FSPassengers
+$cfg["ShowAverageTime"] = 0;		//Display the average time per flight
+$cfg["ShowTotalDistance"] = 0;		//Display the total distance flown with FSPassengers
+$cfg["ShowAverageDistance"] = 1;	//Display the average distance flown per flight
+$cfg["ShowTotalPax"] = 0;		//Display the total amount of Pax transported
+$cfg["ShowAverageTDS"] = 1;		//Display the average touchdown speed over all flights
+$cfg["ShowMinimumTDS"] = 0;		//Display the minimum touchdown speed ever achieved
+$cfg["ShowMaximumTDS"] = 0;		//Display the maximum touchdown speed ever suffered
+
+#####################################################################################
+
+Simply toggle the parameters you wish to display using [1] to enable and [0] to disable the parameter.
+
+
+c) Examples
+
+Included in this package are the following JPG files:
+
+-sigex.jpg		Example of a sig on a generic empty background
+-sigfspex.jpg		Example of a sig on a FSPassengers background
+-sigsrex.jpg		Example of a sig on a customized background
+
+
+d) Customizing your background file
+
+You either use one of the two "PNG" files supplied with this package or create your very own using your favorite graphics programme (i.e. Photoshop or Paint Shop Pro".
+
+Please note: if you change the filename, do not forget to change the $cfg["SigName"] parameter in your "fspsigconfig.php" file.
+
 (C)2006 Mark Brighty
